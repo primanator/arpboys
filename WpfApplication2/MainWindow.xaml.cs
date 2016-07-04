@@ -26,24 +26,38 @@ namespace WpfApplication2
 
         public void textBox1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (textBox1.Text == "")
-                textBox1.Text = ("0");
+            textBox1.Text = CheckTextBoxEmpty(textBox1.Text);
         }
 
         public void textBox2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (textBox2.Text == "")
-                textBox2.Text = ("0");
+            textBox2.Text = CheckTextBoxEmpty(textBox2.Text);
         }
-        
-        public void button1_Click(object sender, RoutedEventArgs e)
-        {
-            if (textBox1.Text == "")
-                textBox1.Text = ("0");
-            
-            if (textBox2.Text == "")
-                textBox2.Text = ("0");
 
+        public string CheckTextBoxEmpty(string text)
+        {
+            if (text == "")
+                return "0";
+            return text;
+        }
+
+        public void CheckTextBoxValue(string text)
+        {
+            char[] arr = text.ToCharArray();
+            foreach (char c in arr)
+                if (c < '0' & c > '9')
+                    throw new FormatException();
+        }
+
+        public void ClearAllFileds()
+        {
+            textBox1.Text = "0";
+            textBox2.Text = "0";
+            Resl.Text = "";
+        }
+
+        public void Calculations()
+        {
             double Arm = Convert.ToDouble(textBox1.Text);
             double Pen = Convert.ToDouble(textBox2.Text) / 100;
             if (Pen > 1)
@@ -61,11 +75,23 @@ namespace WpfApplication2
             double ArmRedPost = (ArmLeft / (ArmLeft + 15235.5)) * 100;
             double ArmRedDef = (ArmRedPre - ArmRedPost);
 
-            Resl.Text =
-"\n Уменьшение физ. урона до рейтинга пробивания = " + Convert.ToString(ArmRedPre) + " %"
-+ "\n Остаток эффективной брони после рейтинга пробивания = " + Convert.ToString(ArmLeft)
-+ "\n Уменьшение физ. урона после рейтинга пробивания = " + Convert.ToString(ArmRedPost) + " %"
-+ "\n Разница физ урона после рейтинга пробивания = " + Convert.ToString(ArmRedDef) + " %";
+            Resl.Text = String.Format("\n Decreasing of physical damage BEFORE armor penetration = {0} %\n Residue of effective armor AFTER penetration = {1}\n Decreasing of physical damage AFTER armor penetration = {2} %\n The difference of physical damage AFTER armor penetration = {3} %",
+                Math.Round(ArmRedPre, 2), Math.Round(ArmLeft,2), Math.Round(ArmRedPost,2), Math.Round(ArmRedDef, 2));
+        }
+
+        public void button1_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CheckTextBoxValue(textBox1.Text);
+                CheckTextBoxValue(textBox2.Text);
+                Calculations();
+            }
+            catch
+            {
+                MessageBox.Show("Please enter only numbers!");
+                ClearAllFileds();
+            }
         }
     }
 }

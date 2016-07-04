@@ -13,11 +13,11 @@
             <ColumnDefinition Width="0" />
             <ColumnDefinition Width="227" />
         </Grid.ColumnDefinitions>
-        <TextBox Margin="22,83,46,92" Name="textBox1" TextChanged="textBox1_TextChanged" Text="10643" />
+        <TextBox Margin="22,84,46,91" Name="textBox1" TextChanged="textBox1_TextChanged" Text="10643" />
         <TextBox Margin="40,84,36,92" Name="textBox2" TextChanged="textBox2_TextChanged" Grid.Column="3" Text="0" />
-        <Button Content="Посчитать" Margin="89,133,91,24" Name="button1" Click="button1_Click" HorizontalContentAlignment="Center" Grid.ColumnSpan="4" />
-        <Label Content="Значение брони" Margin="22,42,70,119" Name="label1" Target="{Binding}" />
-        <Label Content="Пробивание брони %" Margin="40,42,49,119" Name="label2" Grid.Column="3" />
+        <Button Content="Count" Margin="89,133,91,24" Name="button1" Click="button1_Click" HorizontalContentAlignment="Center" Grid.ColumnSpan="4" />
+        <Label Content="Armor value" Margin="22,42,70,119" Name="label1" Target="{Binding}" />
+        <Label Content="Armor penetration %" Margin="40,42,49,119" Name="label2" Grid.Column="3" />
         <Grid Height="100" HorizontalAlignment="Left" Margin="118,27,0,0" Name="grid1" VerticalAlignment="Top" Width="200" Grid.ColumnSpan="4" />
         <TextBlock Height="90" HorizontalAlignment="Left" Margin="12,0,0,0" Name="Resl" 
                    Text="" 

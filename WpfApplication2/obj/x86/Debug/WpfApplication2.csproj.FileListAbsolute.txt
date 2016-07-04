@@ -9,3 +9,15 @@ C:\Users\3647\documents\visual studio 2010\Projects\WpfApplication2\WpfApplicati
 C:\Users\3647\documents\visual studio 2010\Projects\WpfApplication2\WpfApplication2\obj\x86\Debug\ArpBoys.Properties.Resources.resources
 C:\Users\3647\documents\visual studio 2010\Projects\WpfApplication2\WpfApplication2\obj\x86\Debug\ArpBoys.exe
 C:\Users\3647\documents\visual studio 2010\Projects\WpfApplication2\WpfApplication2\obj\x86\Debug\ArpBoys.pdb
+D:\Git_Projects\arpboys\WpfApplication2\bin\Debug\ArpBoys.exe
+D:\Git_Projects\arpboys\WpfApplication2\bin\Debug\ArpBoys.pdb
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\MainWindow.baml
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\MainWindow.g.cs
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\App.g.cs
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\ArpBoys_MarkupCompile.cache
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\ArpBoys.g.resources
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\ArpBoys.Properties.Resources.resources
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\WpfApplication2.csproj.GenerateResource.Cache
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\ArpBoys.exe
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\ArpBoys.pdb
+D:\Git_Projects\arpboys\WpfApplication2\obj\x86\Debug\WpfApplication2.csprojResolveAssemblyReference.cache
